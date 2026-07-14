@@ -10,11 +10,12 @@ A command-line To-Do List application developed as part of my study journey.
 
 ## Features
 
-- Add tasks
-- Remove tasks
+- Display a menu
+- Add and remove tasks
 - List tasks
 - Save tasks to a file
+- Exit option
 
-## How to run
+## Status
 
-## What I learned
+In development
