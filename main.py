@@ -1,3 +1,5 @@
+tasks = []
+
 def show_menu():
     print("=== TO-DO LIST ===")
     print("1. Add task")
@@ -7,8 +9,9 @@ def show_menu():
     print("0. Exit")
     print("")
 
-def add_task():
-    print("Adding task...")
+def add_task(new_task):
+    tasks.append(new_task)
+    print(f"Task \"{new_task[0]}\" added to {new_task[1]}")
 
 def list_tasks():
     print("Listing tasks...")
@@ -27,7 +30,11 @@ def main():
     opcao = int(input("Escolha uma opção: "))
     
     if opcao == 1:
-        add_task()
+        task_info = []
+        task_info.append(input("Task: "))
+        task_info.append(input("Time: "))
+
+        add_task(task_info)
     elif opcao == 2:
         list_tasks()
     elif opcao == 3:
