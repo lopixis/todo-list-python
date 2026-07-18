@@ -10,10 +10,10 @@ A command-line To-Do List application developed as part of my study journey.
 
 ## Features
 
-- Display a menu
+- Display a persistent menu
 - Add and remove tasks
 - List tasks
-- Save tasks to a file
+- Export tasks to a file
 - Exit option
 
 ## Status
