@@ -14,7 +14,12 @@ def add_task(new_task):
     print(f"Task \"{new_task[0]}\" added to {new_task[1]}")
 
 def list_tasks():
-    print("Listing tasks...")
+    if not tasks:
+        print("No tasks defined.")
+        return
+
+    for task in tasks:
+        print(f"Task: {task[0]} | {task[1]}")
 
 def remove_task():
     print("Removing task...")
@@ -22,26 +27,24 @@ def remove_task():
 def import_to_file():
     print("Importing task to a file...")
 
-def exit_program():
-    print("Exiting program...")
-
 def main():
-    show_menu()
-    opcao = int(input("Escolha uma opção: "))
-    
-    if opcao == 1:
-        task_info = []
-        task_info.append(input("Task: "))
-        task_info.append(input("Time: "))
+    while True:
+        show_menu()
+        opcao = int(input("Escolha uma opção: "))
+        
+        if opcao == 1:
+            task_info = []
+            task_info.append(input("Task: "))
+            task_info.append(input("Time: "))
 
-        add_task(task_info)
-    elif opcao == 2:
-        list_tasks()
-    elif opcao == 3:
-        remove_task()
-    elif opcao == 4:
-        import_to_file()
-    elif opcao == 0:
-        exit_program()
+            add_task(task_info)
+        elif opcao == 2:
+            list_tasks()
+        elif opcao == 3:
+            remove_task()
+        elif opcao == 4:
+            import_to_file()
+        elif opcao == 0:
+            break
 
 main()
